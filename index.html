@@ -20,10 +20,6 @@
       --gold-1: #fceabb;
       --gold-2: #f1c40f;
       --gold-3: #b8860b;
-
-      /* Dark gradient for title emoji chilli */
-      --dark-blue: #003366;
-      --dark-gold: #b8860b;
     }
 
     * {
@@ -108,6 +104,10 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2em;
     }
 
     .blue-text {
@@ -132,28 +132,10 @@
         0 0 36px rgba(184,134,11,0.3);
     }
 
-    /* Dark gradient Chilli in title emoji */
-    .title-chilli {
-      background: linear-gradient(45deg, var(--dark-blue), var(--dark-gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow:
-        0 0 12px rgba(0,51,102,0.4),
-        0 0 22px rgba(184,134,11,0.3);
-      margin-left: 0.15em;
-      position: relative;
-      display: inline-block;
-      animation: flicker 1.5s infinite;
-    }
-
-    /* Subtle flicker animation */
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 22%, 24%, 55% {
-        opacity: 0.2;
-      }
+    /* Logo image in title */
+    .title-logo {
+      width: 2.5rem;
+      height: auto;
     }
 
     .subtitle {
@@ -172,11 +154,14 @@
     @media (max-width: 600px) {
       .title {
         font-size: 2.6rem;
-        letter-spacing: 0.22em;
       }
 
       .bg-chilli {
         font-size: 15rem;
+      }
+
+      .title-logo {
+        width: 1.8rem;
       }
     }
   </style>
@@ -190,7 +175,7 @@
     <h1 class="title">
       <span class="blue-text">Blue</span>
       <span class="gold-text">Chilli</span>
-      <span class="title-chilli">🌶️</span>
+      <img src="logo.png" alt="Logo" class="title-logo">
     </h1>
 
     <p class="subtitle">✨ Launching Soon ✨</p>
